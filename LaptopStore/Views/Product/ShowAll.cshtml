@@ -1,0 +1,70 @@
+﻿
+<div class="content">
+@foreach (Product item in Model)
+
+{
+	
+		<div class="card">
+			<div class="image">
+				<img src="~/imgs/@item.Img" alt="Alternate Text" />
+			</div>
+			<div class="text">
+				<h3>
+					@item.Name
+				</h3>
+				<p>
+					Product @item.Name Info/Descreption
+				</p>
+				<h5>
+					@item.Price
+				</h5>
+			</div>
+		</div>
+
+	
+}
+</div>
+
+<style>
+	*{
+		padding:0;
+		margin:0;
+		box-sizing:border-box;
+
+	}
+	.content{
+		/* border:1px solid red; */
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		gap: 20px;
+	}
+	.content .card{
+		/* border: 1px solid red; */
+		border-radius: 20px;
+		padding: 10px;
+	}
+	.image{
+		overflow:hidden;
+		border-radius:10px;
+	}
+	.image img{
+			width: 270px;
+	}
+	.text{
+		padding:20px;
+	}
+	.text h3{
+		font-size:20px;
+			margin: 0;
+		}
+
+	.text p {
+		font-size: 14px;
+	}
+
+	.text h5 {
+		font-size: 17px;
+		margin:0;
+	}
+</style>
+

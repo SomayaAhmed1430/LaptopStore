@@ -1,0 +1,41 @@
+﻿@{
+	ViewData["Title"] = "Product Details";
+}
+<h2>Product Details</h2>
+
+
+<div class="details">
+	<div class="image">
+		<img src="~/imgs/@Model.Img" alt="Alternate Text" />
+	</div>
+	<div class="text">
+		<h2>
+			@Model.Name
+		</h2>
+		<p>
+			Product Name : <bold> @Model.Name </bold> <br /> Non-nullable property 'Name' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.Non-nullable property 'Img' must contain a non-null value when exiting constructor.
+		</p>
+		<h4>
+			Price : @Model.Price LE
+		</h4>
+	</div>
+</div>
+
+
+<style>
+	.image img 
+	{
+		width: 600px;
+		border-radius:20px;
+	}
+	.details
+	{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	.text
+	{
+		padding: 50px;
+	}
+</style>
+
